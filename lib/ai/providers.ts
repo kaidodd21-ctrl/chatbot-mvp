@@ -23,7 +23,7 @@ export const myProvider = isTestEnvironment
     })
   : customProvider({
       languageModels: {
-        'chat-model': gateway.languageModel('xai/grok-2-vision-1212'),
+        'chat-model': gateway.languageModel('openai/gpt-4'),
         'chat-model-reasoning': wrapLanguageModel({
           model: gateway.languageModel('xai/grok-3-mini-beta'),
           middleware: extractReasoningMiddleware({ tagName: 'think' }),
